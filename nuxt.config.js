@@ -12,7 +12,8 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {rel: 'stylesheet', href:'https://use.typekit.net/bts2mss.css'}
     ]
   },
 
@@ -22,6 +23,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -29,7 +31,14 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    ['nuxt-gsap-module'],
   ],
+
+  gsap: {
+    extraPlugins: {
+      scrollTrigger: true,
+    }
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -37,5 +46,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    // extend() {},
+    // transpile: ['gsap'],
   }
 }
