@@ -1,39 +1,32 @@
 <template>
   <div class="wrapper">
-    <Header/>
+
     <mq-layout mq="md+">
+      <DeskHeader/>
       <Work/>
     </mq-layout>
+
     <mq-layout :mq="['xs','sm']">
       <Mobile/>
-      <Info/>
+      <MobHeader/>
     </mq-layout>
+
   </div>
 
 </template>
 
 <script>
+import DeskHeader from '../components/DeskHeader.vue'
+import MobHeader from '../components/MobHeader.vue'
 import Work from '../components/Work.vue'
 import Mobile from '../components/Mobile.vue'
-import Info from '../components/Info.vue'
+// import Info from '../components/Info.vue'
 
 export default {
-  components: { Mobile,  Work, Info },
+  components: { Mobile,  Work, DeskHeader, MobHeader },
   name: 'IndexPage'
 }
 </script>
 
-<style lang="scss">
-  // .wrapper{
-  //   display: flex;
-  //   flex-direction: column;
-  //   font-family: "neue-haas-grotesk-display", sans-serif;
-  //   font-weight: 600;
-  //   font-style: normal;
-  //   @media(max-width: 768px){
-  //   font-family: "neue-haas-grotesk-display", sans-serif;
-  //   font-weight: 500;
-  //   font-style: normal;
-  //   }
-  // }
-</style>
+<!-- <style lang="scss">
+</style> -->

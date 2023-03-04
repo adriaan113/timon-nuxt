@@ -30,22 +30,6 @@ if (process.client) {
         }
       },
       methods:{
-
-        // test(){
-
-        //     let sections = this.$gsap.utils.toArray(this.$refs["mob-item"]);
-        //     this.$gsap.to(sections, {
-        //         yPercent: -100 * (sections.length -1),
-        //         ease: "none",
-        //         scrollTrigger:{
-        //             trigger: ".wrapper",
-        //             pin: true,
-        //             scrub: true,
-        //             snap: 1 / (sections.length - 1),
-        //             //pinSpacing: false,
-        //         }
-        //     })
-        // },
   
         mobileScroll(){
           let sections = gsap.utils.toArray(this.$refs["mob-item"]),
@@ -103,7 +87,6 @@ if (process.client) {
         this.getWork();
         setTimeout(() => {
             this.mobileScroll(); 
-            //this.test();
         }, 100);
       
       }
@@ -132,8 +115,6 @@ if (process.client) {
             opacity: 1;
             visibility: visible;
         }
-        // left: 0;
-        // background-size: contain;
         img{
             width: 100%;
         }

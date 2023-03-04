@@ -10,14 +10,14 @@
       </li>
     </ul>
 
-    <div class="main-text">
+    <div class="main-desk-text">
       <p>
         This design studio is square, it is round, it can be flat or with dimensions. It admires the old and the new, the obvious and the hidden. Studio Timon van der Hijden is a one-man 
       </p>
       <p>studio and is involved in creative communication, image making and spatial design. Based in Rotterdam but working worldwide.</p>
     </div>
 
-    <div class="cta">
+    <div class="desk-cta">
       <a :href="`mailto:${timon.email}`">email</a>
       <a :href="timon.insta" target="\blank">instagram</a>
     </div>
@@ -38,7 +38,6 @@ export default {
           insta: 'https://www.instagram.com/timonvanderhijden/?hl=en'
         },
         works: [],
-        modal: false,
       }
     },
 
@@ -114,7 +113,7 @@ export default {
     }
   }
 
-  .main-text{
+  .main-desk-text{
     display: flex;
     flex-flow: row nowrap;
     margin-left: 56px;
@@ -126,7 +125,7 @@ export default {
     }
   }
 
-  .cta{
+  .desk-cta{
     display: flex;
     flex-flow: row nowrap;
     //margin-left: 56px;

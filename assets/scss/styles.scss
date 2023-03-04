@@ -42,7 +42,9 @@ body {
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 500;
     font-style: normal;
-    //min-height: 3000px;
+    // @media(max-width: $sm){
+    //     flex-direction: column-reverse;
+    // }
     }
 }
 
@@ -58,78 +60,3 @@ body {
         height: 100%;
     }
 }
-
-// @media(max-width: $sm){
-
-// body{
-//     overscroll-behavior: none;
-//     height: 100vh;
-//     margin: 0;
-//     }
-
-// .wrapper{
-//     overscroll-behavior: none;
-//     height: 100%;
-// }
-
-// .work-container{
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     min-height: calc(100vh - 100px);
-// }
-
-// .work-list{
-//     display: flex;
-//     flex-wrap: nowrap;
-//     list-style: none;
-//     width: 100%;
-//     .work-item{
-//     margin: 1rem;
-//     flex: 1;
-//     display: flex;
-//     flex-flow: column nowrap;
-//     .box{
-//         background-size: cover;
-//         background-position: 50% 50%;
-//         min-width: 400px;
-//         min-height: 40vh;
-//     }
-//     }
-// }
-
-// .main-text{
-//     display: flex;
-//     flex-flow: row nowrap;
-//     margin-left: 56px;
-
-//     p{
-//     max-width: 350px;
-//     }
-// }
-
-// .cta{
-//     display: flex;
-//     flex-flow: row nowrap;
-//     margin-left: 56px;
-//     margin-top: 1rem;
-//     a{
-//     color: black;
-//     text-transform: uppercase;
-//     min-width: 350px;
-//     text-decoration: none;
-//     &:hover{
-//             text-decoration: underline;
-//         }
-//     }
-// }
-
-// }
-
-
-
-    // @for $i from 1 through 5 {
-    //     .work-item:nth-child(#{$i}) .box {
-    //     background-color: lighten(red, $i * 5%);
-    //   }
-    // }
