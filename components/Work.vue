@@ -30,14 +30,16 @@
 import { triggerRef } from 'vue';
 export default {
     name: 'Work',
-
+    props: {
+      work: Array,
+    },
     data: function(){
       return{
         timon:{
           email: 'timon@timonvanderhijden.nl',
           insta: 'https://www.instagram.com/timonvanderhijden/?hl=en'
         },
-        works: [],
+        works: this.work,
       }
     },
 
@@ -61,22 +63,13 @@ export default {
         });
 
       },
-      getWork(){
-        fetch('/data/work.json')
-        .then((response) => response.json())
-        .then((data) => {
-          for(let i =0; i<data.timon.length;i++){
-            this.works.push(data.timon[i]);
-          }
-        })
-      },
       // openWork(work){
       //   console.log(work.client);
       // },
     },
     mounted(){
       
-      this.getWork();
+      //this.getWork();
       setTimeout(()=>{
         this.workScroll();
       },100)
@@ -128,7 +121,6 @@ export default {
   .desk-cta{
     display: flex;
     flex-flow: row nowrap;
-    //margin-left: 56px;
     margin: 1rem 0 1rem 56px;
     a{
       color: black;

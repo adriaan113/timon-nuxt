@@ -16,7 +16,6 @@
             <div class="main-mob-text">
                 <p>This design studio is square, it is round, it can be flat or with dimensions. It admires the old and the new, the obvious and the hidden. Studio Timon van der Hijden is a one-man studio and is involved in creative communication, image making and spatial design. Based in Rotterdam but working worldwide.</p>
             </div>
-
         </div>
 
     </div>
@@ -49,9 +48,6 @@ export default {
                 document.querySelector('.info-btn h2:last-of-type').innerHTML = 'fo';
                 this.modal = true;
             }
-
-            //this.modal = !this.modal;
-    
         },
     }
 }

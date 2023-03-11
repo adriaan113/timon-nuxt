@@ -3,6 +3,9 @@
         <ul class="satan">
             <li class="item" ref="mob-item" v-for="(work, index) in works" :key="work[index]">
                 <img :src="work.mob" alt="">
+                <div>
+                  <p>{{work.client}}</p>
+                </div>
             </li>
         </ul>  
     </div>
@@ -23,10 +26,12 @@ if (process.client) {
 
   export default {
       name: 'Mobile',
-
-      data () {
+      props:{
+        work: Array,
+      },
+      data: function() {
         return {
-        works: [],
+        works: this.work,
         }
       },
       methods:{
@@ -34,6 +39,14 @@ if (process.client) {
         mobileScroll(){
           let sections = gsap.utils.toArray(this.$refs["mob-item"]),
           currentSection = sections[0];
+
+          // if(currentSection != sections[0]){
+          //   sections[0].children[1].children[0].style.color = 'black';
+          // }
+
+          //sections[0].children[1].children[0].style.color = 'black';
+
+
   
           ScrollTrigger.normalizeScroll(true);
   
@@ -61,6 +74,7 @@ if (process.client) {
             gsap.to(currentSection, {autoAlpha: 0})
             gsap.to(newSection, {autoAlpha: 1});
             currentSection = newSection;
+            sections[0].children[1].children[0].style.display = 'block';
           }
       }
   
@@ -72,22 +86,24 @@ if (process.client) {
         onLeave: self => self.scroll(2)
         }).scroll(2);
         },
-        
-        getWork(){
-        fetch('/data/work.json')
-        .then((response) => response.json())
-        .then((data) => {
-        for(let i =0; i<data.timon.length;i++){
-            this.works.push(data.timon[i]);
-            }
-            })
-        },
+
+        // hideFirstClient(){
+        //   const allClients = document.querySelectorAll(".item");
+          
+        //   for(let i= 0; i< allClients.length; i++){
+        //     if(allClients[0].children[1].children[0].style.color === 'red'){
+        //         allClients[i].children[1].children[0].style.color = 'yellow';
+        //       }
+        //     }
+        // },
       },
       mounted(){
-        this.getWork();
+        //this.hideFirstClient();
         setTimeout(() => {
             this.mobileScroll(); 
         }, 100);
+
+        
       
       }
   }
@@ -114,10 +130,33 @@ if (process.client) {
         &:first-of-type{
             opacity: 1;
             visibility: visible;
+            div{
+              p{
+                // color: red;
+                display: none;
+              }
+            }
         }
         img{
             width: 100%;
         }
+        div{
+          position: fixed;
+          bottom: 0;
+          height: 30px;
+          z-index: 2;
+          margin: 0;
+          padding-left: 1rem;
+          padding-bottom: .3rem;
+          width: 100%;
+          background: $white;
+          p{
+            margin: 0;
+            color: black;
+            //display: none;
+          }
+        }
+
       }
     }
 }
