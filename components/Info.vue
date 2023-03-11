@@ -80,7 +80,9 @@ export default {
     position: fixed;
     flex-flow: column nowrap;
     width: 100%;
-    height: calc(100vh - 15.5vh);
+    //height: calc(100vh - 15.5vh);
+    height: calc(100vh - (env(safe-area-inset-top) - env(safe-area-inset-bottom)) - 15.5vh );
+
     top: 0;
     left: 0;
     background: $black;
