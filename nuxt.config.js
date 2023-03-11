@@ -2,10 +2,10 @@ import { triggerRef } from "vue";
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  target: 'static',
-  
+  //target: 'static',
+
   head: {
-    title: 'timon-nuxt',
+    title: 'Timon van der Hijden',
     htmlAttrs: {
       lang: 'en'
     },
