@@ -20,7 +20,7 @@ if (process.client) {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-  import { triggerRef } from 'vue';
+ // import { triggerRef } from 'vue';
 
 
 
@@ -82,7 +82,7 @@ if (process.client) {
       mounted(){
         setTimeout(() => {
             this.mobileScroll(); 
-        }, 100);
+        }, 1000);
 
         
       

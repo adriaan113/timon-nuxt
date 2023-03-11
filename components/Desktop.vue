@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { triggerRef } from 'vue';
+// import { triggerRef } from 'vue';
 export default {
     name: 'Desktop',
     props: {
@@ -46,8 +46,6 @@ export default {
     methods:{
       workScroll(){
         let sections = this.$gsap.utils.toArray(this.$refs["desk-item"]);
-        // copy = sections[0].cloneNode(true);
-        // sections[0].parentNode.appendChild(copy);
 
         this.$gsap.to(sections, {
           xPercent: -100 * (sections.length - 1),
@@ -56,23 +54,17 @@ export default {
             trigger: ".wrapper",
             pin: true,
             scrub: 1,
-            //snap: 1 / (sections.length - 1),
-            // base vertical scrolling on how wide the container is so it feels more natural.
             end: "+=3500",
           }
         });
 
       },
-      // openWork(work){
-      //   console.log(work.client);
-      // },
     },
     mounted(){
       
-      //this.getWork();
       setTimeout(()=>{
         this.workScroll();
-      },100)
+      },1000)
       
     }
 }
