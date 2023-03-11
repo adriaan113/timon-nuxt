@@ -2,6 +2,8 @@ import { triggerRef } from "vue";
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  target: 'static',
+  
   head: {
     title: 'timon-nuxt',
     htmlAttrs: {

@@ -45,7 +45,7 @@ export default {
     text-transform: uppercase;
     color: $black;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin: 1.5rem 0 0 1rem;
   }
 }

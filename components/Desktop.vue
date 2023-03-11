@@ -1,7 +1,7 @@
 <template>
-  <div class="work-container">
-    <ul class="work-list">
-      <li class="work-item" ref="desk-item" v-for="(work, index) in works" :key="work[index]">
+  <div class="desk-container">
+    <ul class="desk-list">
+      <li class="desk-item" ref="desk-item" v-for="(work, index) in works" :key="work[index]">
           <div class="box" :style="{ 'background-image': 'url(' + work.desk + ')' }">
           </div>
           <div class="client-wrapper">
@@ -29,7 +29,7 @@
 <script>
 import { triggerRef } from 'vue';
 export default {
-    name: 'Work',
+    name: 'Desktop',
     props: {
       work: Array,
     },
@@ -80,19 +80,19 @@ export default {
 
 <style lang="scss" scoped>
 
-.work-container{
+.desk-container{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: calc(100vh - 100px);
 }
 
-  .work-list{
+  .desk-list{
     display: flex;
     flex-wrap: nowrap;
     list-style: none;
     width: 100%;
-    .work-item{
+    .desk-item{
       margin: 1rem;
       flex: 1;
       display: flex;

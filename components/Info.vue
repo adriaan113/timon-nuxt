@@ -55,7 +55,7 @@ export default {
 
 <style lang="scss" scoped>
 .info-wrapper{
-    margin: 1.5rem 1rem 0 0; 
+    margin: 1.5rem 0 0 0; 
     .info-btn{
         display: flex;
         flex-flow: column nowrap;
@@ -80,7 +80,7 @@ export default {
     position: fixed;
     flex-flow: column nowrap;
     width: 100%;
-    height: calc(100vh - 15vh);
+    height: calc(100vh - 15.5vh);
     top: 0;
     left: 0;
     background: $black;
@@ -103,14 +103,5 @@ export default {
         font-size: 1.6rem;
         margin: 0 1rem;
     }
-
-    // .close-modal{
-    //     color:$white;
-    //     font-size: 2.4rem;
-    //     margin: 2rem auto 0;
-    //     transform: scaleY(.8);
-    //     font-weight: 600;
-    //     cursor: pointer;
-    // }
 }
 </style>

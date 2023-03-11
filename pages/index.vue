@@ -3,7 +3,7 @@
 
     <mq-layout mq="md+">
       <DeskHeader/>
-      <Work :work="works"/>
+      <Desktop :work="works"/>
     </mq-layout>
 
     <mq-layout :mq="['xs','sm']">
@@ -18,11 +18,11 @@
 <script>
 import DeskHeader from '../components/DeskHeader.vue'
 import MobHeader from '../components/MobHeader.vue'
-import Work from '../components/Work.vue'
+import Desktop from '../components/Desktop.vue'
 import Mobile from '../components/Mobile.vue'
 
 export default {
-  components: { Mobile, Work, DeskHeader, MobHeader },
+  components: { Mobile, Desktop, DeskHeader, MobHeader },
   name: 'IndexPage',
   data: function(){
     return{
@@ -39,9 +39,6 @@ export default {
           }
         })
       },
-      lala(){
-        console.log()
-      }
   },
   created(){
     this.getWork();

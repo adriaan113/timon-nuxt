@@ -4,7 +4,7 @@
             <li class="item" ref="mob-item" v-for="(work, index) in works" :key="work[index]">
                 <img :src="work.mob" alt="">
                 <div>
-                  <p>{{work.client}}</p>
+                  <p class="mob-client">{{work.client}}</p>
                 </div>
             </li>
         </ul>  
@@ -40,14 +40,6 @@ if (process.client) {
           let sections = gsap.utils.toArray(this.$refs["mob-item"]),
           currentSection = sections[0];
 
-          // if(currentSection != sections[0]){
-          //   sections[0].children[1].children[0].style.color = 'black';
-          // }
-
-          //sections[0].children[1].children[0].style.color = 'black';
-
-
-  
           ScrollTrigger.normalizeScroll(true);
   
           gsap.defaults({overwrite: 'auto', duration: 0.5});
@@ -86,19 +78,8 @@ if (process.client) {
         onLeave: self => self.scroll(2)
         }).scroll(2);
         },
-
-        // hideFirstClient(){
-        //   const allClients = document.querySelectorAll(".item");
-          
-        //   for(let i= 0; i< allClients.length; i++){
-        //     if(allClients[0].children[1].children[0].style.color === 'red'){
-        //         allClients[i].children[1].children[0].style.color = 'yellow';
-        //       }
-        //     }
-        // },
       },
       mounted(){
-        //this.hideFirstClient();
         setTimeout(() => {
             this.mobileScroll(); 
         }, 100);
